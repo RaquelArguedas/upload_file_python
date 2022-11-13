@@ -15,11 +15,12 @@
         <div class="col-lg-12">
             <h1 class="page-header">Thumbnail Gallery</h1>
         </div>
+        {{path}}
         {{image_names}}
         <hr>
         {% for image_name in image_names %}
         <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-            <img class="img-responsive" src=" {{url_for('send_image', filename=image_name)}}">
+            <img class="img-responsive" src=" {{url_for('send_image',path=path, filename=image_name)}}">
         </div>
         {% endfor %}
     </div>
